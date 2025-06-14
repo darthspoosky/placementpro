@@ -1,0 +1,113 @@
+# IDE and Editor files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+.DS_Store
+
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+.mtj.tmp/
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# React/Web
+/build/
+/dist/
+/coverage/
+/.next/
+.cache/
+
+# Kotlin/Android
+*.apk
+*.aab
+*.ap_
+*.dex
+local.properties
+/captures
+.externalNativeBuild
+.cxx/
+*.hprof
+
+# Spring Boot
+/out/
+.gradle/
+build/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Logs
+logs/
+*.log
+log/
+
+# Temporary files
+tmp/
+temp/
+
+# Dependencies
+.pnp/
+.pnp.js
+.yarn/
+
+# Testing
+/coverage/
+.nyc_output/
+
+# Production build
+/build/
+/dist/
+/out/
+/deploy/
+
+# Config files should be versioned
+!*.config.js
+!*.config.ts
+!*.config.json
+
+# Credentials and secrets
+*.pem
+*.key
+credentials.json
+*_credentials.json
+*_secrets.json
+*secrets.*
+*credentials.*
+.env*
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Docker
+.dockerignore
+
+# Metadata
+.metadata/
+
+# JetBrains IDEs
+*.iws
+*.ipr
+.idea/workspace.xml
+.idea/tasks.xml
