@@ -4,8 +4,8 @@
 **Project Name:** PlacementPro  
 **Start Date:** July 1, 2025  
 **Target Completion:** June 30, 2026  
-**Project Sponsor:** [Sponsor Name]  
-**Project Manager:** [Project Manager Name]
+**Project Sponsor:** TBD
+**Project Manager:** TBD
 
 ## Vision Statement
 PlacementPro will revolutionize the college placement ecosystem in India by creating an intelligent, integrated platform that connects colleges, students, and companies through data-driven insights and AI-powered matching algorithms. We will democratize access to quality placement services by focusing on underserved segments, particularly Tier 2/3 institutions, while providing comprehensive career support including mental health resources and holistic skills assessment. This student-centric approach will result in significantly improved placement rates, reduced administrative overhead, and better career outcomes for all students regardless of institutional resources.
@@ -85,6 +85,6 @@ This Project Charter has been reviewed and approved by:
 
 | Name | Role | Signature | Date |
 |------|------|-----------|------|
-| [UB] | Project Sponsor | | |
-| [UB] | Project Manager | | |
-| [UB] | Technical Lead | | |
+| TBD | Project Sponsor | | |
+| TBD | Project Manager | | |
+| TBD | Technical Lead | | |
