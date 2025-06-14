@@ -8,14 +8,15 @@
 **Project Manager:** [Project Manager Name]
 
 ## Vision Statement
-PlacementPro will revolutionize the college placement ecosystem in India by creating an intelligent, integrated platform that connects colleges, students, and companies through data-driven insights and AI-powered matching algorithms, resulting in significantly improved placement rates and reduced administrative overhead.
+PlacementPro will revolutionize the college placement ecosystem in India by creating an intelligent, integrated platform that connects colleges, students, and companies through data-driven insights and AI-powered matching algorithms. We will democratize access to quality placement services by focusing on underserved segments, particularly Tier 2/3 institutions, while providing comprehensive career support including mental health resources and holistic skills assessment. This student-centric approach will result in significantly improved placement rates, reduced administrative overhead, and better career outcomes for all students regardless of institutional resources.
 
 ## Business Objectives
 1. Achieve ₹2 Crores MRR by end of Year 1, scaling to ₹15 Crores MRR by Year 3
-2. Onboard 50 colleges, 200 companies, and 5,000 students in Year 1
-3. Demonstrate measurable improvement in placement rates (>30%) for partner colleges
+2. Onboard 50 colleges (with at least 40% from Tier 2/3 institutions), 200 companies, and 5,000 students in Year 1
+3. Demonstrate measurable improvement in placement rates (>30% overall, >40% for Tier 2/3 colleges) for partner colleges
 4. Reduce administrative workload for placement offices by 60%
 5. Achieve user satisfaction scores above 4.5/5 for all stakeholder types
+6. Drive diversity metrics with 30% improvement in underrepresented group placements
 
 ## Success Criteria
 1. Complete development and launch of all 4 phases within 12 months
@@ -28,12 +29,13 @@ PlacementPro will revolutionize the college placement ecosystem in India by crea
 
 ### In Scope
 - Multi-stakeholder platform (students, colleges, companies)
-- Web application with responsive design
-- Native Android mobile application
-- AI-powered features (resume optimization, career prediction, etc.)
-- Payment processing and subscription management
-- Analytics and reporting systems
-- Integration capabilities with third-party systems
+- Mobile-first web application with progressive web app capabilities
+- Native Android mobile application optimized for resource-constrained devices
+- AI-powered features (resume optimization, career prediction, mental health support, etc.)
+- Payment processing and subscription management with tiered pricing for different college segments
+- Advanced analytics with diversity metrics and institutional benchmarking
+- Comprehensive API-first integration capabilities with educational systems
+- Alumni network integration and mentorship capabilities
 
 ### Out of Scope
 - iOS-specific native application (planned for Year 2)
@@ -51,10 +53,11 @@ PlacementPro will revolutionize the college placement ecosystem in India by crea
 
 ## High-Level Risks
 1. Data privacy and security concerns
-2. Integration challenges with existing college systems
-3. Scalability during peak recruitment seasons
+2. Integration challenges with legacy college systems, especially at Tier 2/3 institutions
+3. Scalability during peak recruitment seasons with varying infrastructure quality
 4. Market competition and differentiation
-5. Regulatory compliance (education sector)
+5. Regulatory compliance with evolving data protection regulations
+6. Variable digital infrastructure and connectivity in Tier 2/3 college locations
 
 ## Resource Requirements
 1. Development Team: 15 members (full-stack, mobile, DevOps, QA)

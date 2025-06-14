@@ -15,13 +15,17 @@ PlacementPro follows a clean, modular architecture designed for scalability, mai
 ### 1.2 Technology Stack
 
 #### Frontend:
-- **Web Application**: React.js, Redux, Material-UI
+- **Web Application**: React.js, Redux, Material-UI with Progressive Web App capabilities
 - **Mobile Application**: Kotlin with Jetpack Compose, MVVM, Hilt
+- **Mobile-First Design**: Optimized for resource-constrained devices with offline capabilities
+- **Performance Optimization**: Sub-3-second load times, optimized asset delivery
 
 #### Backend:
 - **Services**: Java Spring Boot, Node.js for real-time features
-- **API**: REST, GraphQL, WebSockets
-- **Authentication**: OAuth 2.0, JWT
+- **API**: REST, GraphQL, WebSockets with comprehensive SDK generation
+- **Authentication**: OAuth 2.0, JWT with simplified integration
+- **Scalability**: Tiered architecture supporting varying institutional resource levels
+- **Regulatory Compliance**: Automated compliance management and reporting
 
 #### Database:
 - **Primary Database**: PostgreSQL
@@ -65,9 +69,11 @@ PlacementPro follows a clean, modular architecture designed for scalability, mai
 
 #### Analytics Service
 - Data aggregation and processing
-- Report generation
+- Report generation with customized institutional benchmarking
 - Dashboard data preparation
 - Machine learning model integration
+- Diversity and inclusion analytics with bias detection
+- Placement outcome tracking and prediction
 
 #### Payment Service
 - Subscription management
@@ -77,9 +83,11 @@ PlacementPro follows a clean, modular architecture designed for scalability, mai
 
 #### AI Service
 - Resume analysis and optimization
-- Job-candidate matching
-- Career path prediction
-- Interview simulation and analysis
+- Job-candidate matching with holistic skills assessment
+- Career path prediction with labor market integration
+- Interview simulation with comprehensive soft skills evaluation
+- 24/7 AI career counseling with personalized guidance
+- Mental health support and stress management
 
 #### Notification Service
 - Email notifications
@@ -88,10 +96,14 @@ PlacementPro follows a clean, modular architecture designed for scalability, mai
 - Notification preferences management
 
 #### Integration Service
-- Third-party system integration
+- Third-party system integration with pre-built connectors
 - API gateway management
 - Data transformation
 - Integration monitoring
+- Educational system adaptors (SIS, LMS, finance systems)
+- Student onboarding data synchronization
+- Alumni network integration and management
+- Cross-platform data consistency enforcement
 
 ### 2.2 Database Schema (High-Level)
 
@@ -130,6 +142,10 @@ All REST APIs follow standard conventions:
 - JSON response format
 - JWT authentication
 - Versioned endpoints (/api/v1/...)
+- Comprehensive documentation with interactive playground
+- Pre-built client libraries for major languages
+- Rate limiting aligned with tier-based usage patterns
+- Resource-efficient payloads for bandwidth-constrained clients
 
 Key endpoints include:
 
@@ -228,6 +244,9 @@ app/
 - Redux for state management
 - Custom hooks for reusable logic
 - Server-side rendering for initial load performance
+- Progressive Web App (PWA) architecture for offline functionality
+- Mobile-first responsive design with optimized user flows
+- Resource-efficient rendering for lower-end devices
 
 ### 6.2 Module Structure
 
@@ -268,10 +287,14 @@ src/
 
 ### 7.3 Performance Requirements
 
-- Page load time < 2 seconds
+- Page load time < 2 seconds on fiber connections, < 3 seconds on 3G networks
 - API response time < 200ms for 95% of requests
-- Mobile app cold start < 3 seconds on mid-range devices
+- Mobile app cold start < 3 seconds on mid-range devices, < 5 seconds on entry-level devices
 - Support for 10,000 concurrent users
+- Graceful degradation for low-bandwidth environments
+- Offline functionality for core student features
+- Minimal data usage with intelligent asset loading
+- Battery-efficient operation on mobile devices
 
 ## 8. AI & ML Specifications
 

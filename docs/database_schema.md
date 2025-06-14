@@ -52,7 +52,15 @@ CREATE TABLE student_profiles (
   portfolio_url VARCHAR(255),
   bio TEXT,
   skills TEXT[],
+  non_technical_skills TEXT[],
+  soft_skills TEXT[],
+  preferred_work_environment TEXT[],
   placement_status VARCHAR(20) DEFAULT 'NOT_PLACED' CHECK (placement_status IN ('NOT_PLACED', 'PLACED', 'OFFER_RECEIVED')),
+  device_type VARCHAR(50),
+  network_access_level VARCHAR(20) CHECK (network_access_level IN ('CONTINUOUS', 'INTERMITTENT', 'LIMITED')),
+  diversity_data JSONB,
+  career_counseling_status VARCHAR(20),
+  mental_health_status VARCHAR(20),
   created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
@@ -77,11 +85,15 @@ CREATE TABLE colleges (
   accreditation VARCHAR(100),
   description TEXT,
   logo_url VARCHAR(255),
+  college_tier INTEGER CHECK (college_tier BETWEEN 1 AND 3),
+  resource_level VARCHAR(20) CHECK (resource_level IN ('HIGH', 'MEDIUM', 'LOW')),
   subscription_plan VARCHAR(50),
   subscription_status VARCHAR(20),
   subscription_start_date DATE,
   subscription_end_date DATE,
   student_limit INTEGER,
+  connectivity_quality VARCHAR(20) CHECK (connectivity_quality IN ('HIGH', 'MEDIUM', 'LOW')),
+  offline_support_needed BOOLEAN DEFAULT FALSE,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
@@ -164,6 +176,102 @@ CREATE TABLE job_applications (
 );
 
 CREATE UNIQUE INDEX unique_application_idx ON job_applications(job_posting_id, student_id);
+```
+
+### Alumni Network
+
+```sql
+CREATE TABLE alumni_profiles (
+  id UUID PRIMARY KEY,
+  user_id UUID NOT NULL REFERENCES users(id),
+  college_id UUID NOT NULL REFERENCES colleges(id),
+  graduation_year INTEGER NOT NULL,
+  current_company VARCHAR(255),
+  current_position VARCHAR(255),
+  industry VARCHAR(100),
+  experience_years INTEGER,
+  linkedin_url VARCHAR(255),
+  willing_to_mentor BOOLEAN DEFAULT FALSE,
+  mentorship_areas TEXT[],
+  availability VARCHAR(50),
+  bio TEXT,
+  career_highlights TEXT[],
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE mentorships (
+  id UUID PRIMARY KEY,
+  mentor_id UUID NOT NULL REFERENCES alumni_profiles(id),
+  mentee_id UUID NOT NULL REFERENCES student_profiles(id),
+  status VARCHAR(20) CHECK (status IN ('REQUESTED', 'ACTIVE', 'COMPLETED', 'REJECTED')),
+  request_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  start_date TIMESTAMP WITH TIME ZONE,
+  end_date TIMESTAMP WITH TIME ZONE,
+  focus_areas TEXT[],
+  goals TEXT,
+  feedback_mentor TEXT,
+  feedback_mentee TEXT,
+  meeting_count INTEGER DEFAULT 0,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### Mental Health Support
+
+```sql
+CREATE TABLE mental_health_resources (
+  id UUID PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  resource_type VARCHAR(50) CHECK (resource_type IN ('ARTICLE', 'VIDEO', 'TOOL', 'EXERCISE', 'CONTACT')),
+  content TEXT,
+  url VARCHAR(255),
+  tags TEXT[],
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE student_wellness_profiles (
+  id UUID PRIMARY KEY,
+  student_id UUID NOT NULL REFERENCES student_profiles(id),
+  stress_levels INTEGER[] DEFAULT '{}',
+  confidence_levels INTEGER[] DEFAULT '{}',
+  anxiety_triggers TEXT[],
+  coping_strategies TEXT[],
+  completed_assessments TEXT[],
+  resource_recommendations UUID[] REFERENCES mental_health_resources(id),
+  last_wellness_check TIMESTAMP WITH TIME ZONE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### Diversity and Inclusion
+
+```sql
+CREATE TABLE diversity_categories (
+  id UUID PRIMARY KEY,
+  category_name VARCHAR(100) NOT NULL,
+  description TEXT,
+  privacy_level VARCHAR(20) CHECK (privacy_level IN ('PUBLIC', 'INSTITUTIONAL', 'RESTRICTED')),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE diversity_metrics (
+  id UUID PRIMARY KEY,
+  college_id UUID NOT NULL REFERENCES colleges(id),
+  reporting_period VARCHAR(20),
+  start_date DATE,
+  end_date DATE,
+  metrics_data JSONB,
+  improvement_percentage DECIMAL(5,2),
+  goals JSONB,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
 ```
 
 ### Interview Schedule

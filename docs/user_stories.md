@@ -7,7 +7,8 @@ This document outlines the user stories and acceptance criteria for key screens 
 2. [Student User Stories](#student-user-stories)
 3. [College Admin User Stories](#college-admin-user-stories)
 4. [Company Recruiter User Stories](#company-recruiter-user-stories)
-5. [System Admin User Stories](#system-admin-user-stories)
+5. [Alumni User Stories](#alumni-user-stories)
+6. [System Admin User Stories](#system-admin-user-stories)
 
 ## Public Website User Stories
 
@@ -64,8 +65,13 @@ This document outlines the user stories and acceptance criteria for key screens 
 - Multi-step onboarding process with progress indicator
 - Profile completion wizard includes personal, educational, skills information
 - Option to import data from college systems where available
-- Skills assessment functionality with clear instructions
-- Career goals setting with guidance
+- Comprehensive skills assessment including technical, non-technical, and soft skills
+- Mental health baseline assessment with privacy controls
+- Device and connectivity profile setup for optimized mobile experience
+- Offline mode configuration for intermittent connectivity scenarios
+- Career goals setting with guidance from AI counselor
+- Initial wellness check and stress management resource recommendations
+- Option to connect with alumni mentors in related fields
 - Premium feature previews with upgrade prompts
 - Clear completion indication and next steps guidance
 
@@ -77,18 +83,25 @@ This document outlines the user stories and acceptance criteria for key screens 
 - Dashboard shows key metrics (applications submitted, interviews scheduled, etc.)
 - Upcoming events and deadlines are prominently displayed
 - Quick access to job discovery, application tracker, and profile
+- Offline mode indicator showing which features are available without internet
+- Sync status indicator for content saved while offline
+- Data usage optimization controls for limited connectivity environments
 - Clear distinction between free features and premium features
 - Premium upgrade prompts are contextually relevant
 - Notifications for important updates
 
 ### Job Discovery (`/student/jobs`)
 
-**User Story**: As a student, I want to browse and search for job openings so that I can find relevant opportunities.
+**User Story**: As a student, I want to browse and search for job openings so that I can find relevant opportunities that match my profile and preferences.
 
 **Acceptance Criteria**:
 - List view of all available jobs with key information
 - Filter options for location, job type, company, etc.
 - Search functionality with keyword matching
+- AI-powered job recommendations based on holistic skills assessment
+- Option to save jobs for offline viewing
+- Compatibility indicators showing skills match with each position
+- Non-technical discipline job opportunities clearly highlighted 
 - Clear indication of application limit for free tier (5/month)
 - Premium features (AI matching, unlimited applications) are previewed but locked
 - Job detail view with comprehensive information
@@ -109,13 +122,20 @@ This document outlines the user stories and acceptance criteria for key screens 
 
 ### Interview Preparation (`/student/interview-prep`)
 
-**User Story**: As a student with scheduled interviews, I want access to preparation materials so that I can perform well.
+**User Story**: As a student with scheduled interviews, I want access to preparation materials so that I can perform well and manage interview anxiety.
 
 **Acceptance Criteria**:
 - Basic interview tips and common questions for free tier
-- Clear distinction between free and premium content
-- Preview of premium features (company-specific mock interviews, AI practice sessions)
-- Upgrade prompts for premium features
+- Company-specific preparation materials (premium preview)
+- Mock interview tools (premium preview)
+- AI feedback on practice answers (premium preview)
+- Industry-specific question banks
+- Timeline with recommended preparation schedule
+- Mental health check-in before interviews with stress-management techniques
+- Confidence-building exercises and positive affirmations
+- Offline access to preparation materials for low-connectivity situations
+- Pre-interview anxiety reduction toolkit
+- Post-interview reflection and self-care guidances
 - Integration with scheduled interviews to show relevant prep material
 - Progress tracking for preparation activities
 
@@ -135,12 +155,16 @@ This document outlines the user stories and acceptance criteria for key screens 
 
 ### Admin Dashboard (`/admin/dashboard`)
 
-**User Story**: As a college admin, I want to see an overview of placement activities so that I can monitor overall performance.
+**User Story**: As a college admin, I want to see an overview of placement activities so that I can monitor overall performance and identify areas for improvement.
 
 **Acceptance Criteria**:
 - Key metrics dashboard (placement rate, active companies, etc.)
+- Diversity and inclusion metrics highlighting placement rates across different demographics
+- College tier-specific insights and benchmarks against similar institutions
+- Offline capability for key dashboard functions in low-connectivity environments
+- Resource usage optimization recommendations based on college's infrastructure level
 - Subscription usage information with upgrade prompts when approaching limits
-- Quick access to student management, company relations, and analytics
+- Quick access to student management, company relations, analytics, and alumni network
 - Notifications for important events and deadlines
 - Calendar view of upcoming recruitment activities
 - Quick action buttons for common tasks
@@ -173,16 +197,21 @@ This document outlines the user stories and acceptance criteria for key screens 
 
 ### Placement Analytics (`/admin/analytics`)
 
-**User Story**: As a college admin, I want to access placement data analytics so that I can make data-driven decisions.
+**User Story**: As a college admin, I want to access placement data analytics so that I can make data-driven decisions and improve student outcomes.
 
 **Acceptance Criteria**:
 - Basic analytics dashboards included in all tiers
 - Department-wise placement comparisons
 - Year-over-year trend analysis
+- Diversity and inclusion analytics showing representation and outcomes across demographics
+- Bias detection in placement patterns with actionable recommendations
+- Placement gap identification between disciplines and demographic groups
+- Mental health correlation analysis with placement outcomes (anonymized)
 - Premium analytics features clearly marked
 - Predictive placement modeling (premium preview)
 - Industry benchmark comparisons (premium preview)
 - Export functionality for reports
+- Offline report generation and scheduled syncing for limited connectivity
 
 ## Company Recruiter User Stories
 
@@ -248,6 +277,46 @@ This document outlines the user stories and acceptance criteria for key screens 
 - Premium assessment tools preview
 - Video interview platform integration preview
 - Notification system for interview updates
+
+## Alumni User Stories
+
+### Alumni Onboarding (`/alumni/onboarding`)
+
+**User Story**: As a college graduate, I want to join the alumni network so that I can contribute to my alma mater's placement efforts and mentor students.
+
+**Acceptance Criteria**:
+- Streamlined registration process with LinkedIn integration
+- Profile completion wizard capturing career progression and expertise areas
+- Mentorship preferences and availability settings
+- Privacy controls for personal and professional information
+- Clear explanation of alumni network benefits and responsibilities
+- Connection with college batch mates and department groups
+
+### Alumni Dashboard (`/alumni/dashboard`)
+
+**User Story**: As an alumni member, I want to see opportunities to engage with current students and contribute to placement activities.
+
+**Acceptance Criteria**:
+- Mentorship request overview and management
+- Upcoming campus events and virtual engagement opportunities
+- Impact metrics showing contribution to student placements
+- Recognition badges and gamification elements for active participation
+- News feed with college updates and student achievements
+- Quick access to mentee profiles and communication tools
+
+### Mentorship Management (`/alumni/mentorship`)
+
+**User Story**: As an alumni mentor, I want to manage my mentorship relationships and track progress with my mentees.
+
+**Acceptance Criteria**:
+- List view of current and past mentees with relationship status
+- Mentorship request review and response functionality
+- Meeting scheduler with calendar integration
+- Goal setting and progress tracking tools for each mentee
+- Resource sharing capabilities for career guidance materials
+- Feedback collection and impact measurement tools
+- Communication log with mentees
+- Offline mode for connectivity-challenged mentoring sessions
 
 ## System Admin User Stories
 
